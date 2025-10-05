@@ -1,0 +1,27 @@
+{
+  "name": "starcatch-desktop",
+  "version": "1.0.1",
+  "private": true,
+  "main": "electron/main.js",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"npm:dev:vite\" \"npm:dev:electron\"",
+    "dev:vite": "cd app && vite",
+    "dev:electron": "wait-on http://localhost:5173 && electron .",
+    "build:web": "cd app && vite build",
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.25",
+    "@types/react-dom": "^18.3.7",
+    "@vitejs/plugin-react": "^4.3.1",
+    "concurrently": "^9.0.1",
+    "electron": "^32.1.2",
+    "vite": "^5.4.8",
+    "wait-on": "^7.2.0"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
+}
