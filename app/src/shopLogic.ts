@@ -1,5 +1,5 @@
 import { Upgrade, Skin, PlayerProfile } from './types'
-import * as storage from './storage'
+import { storage } from './storage'
 
 // Buy upgrade
 export function buyUpgrade(
