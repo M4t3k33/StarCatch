@@ -12,10 +12,10 @@ export function isDeltaSuspicious(deltaSeconds: number): boolean {
 }
 
 export function isScoreProgressValid(prevScore: number, nextScore: number): boolean {
-  // Dozwolony wzrost max +5 na pojedynczą klatkę (bufor na combo)
+  // Dozwolony wzrost max +20 na pojedynczą klatkę (bufor na combo i power-upy)
   if (!Number.isFinite(prevScore) || !Number.isFinite(nextScore)) return false
   if (nextScore < prevScore) return false
-  return nextScore - prevScore <= 5
+  return nextScore - prevScore <= 20
 }
 
 
